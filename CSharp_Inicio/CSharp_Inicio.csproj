@@ -9,8 +9,5 @@
     <ItemGroup Label="Simplificar el uso de la consola">
 	    <Using Include="System.Console" Static="true" />
     </ItemGroup>
-    <ItemGroup>
-      <Folder Include="03-Classes\" />
-    </ItemGroup>
 
 </Project>
