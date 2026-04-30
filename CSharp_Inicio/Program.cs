@@ -9,6 +9,7 @@ partial class Program
         //ShowEmployeesInformation();
         //HandleException();
 
-        Linq();
+        //Linq();
+        AdvancedLinq.Program.AdvancedLINQ();
     }
 }
