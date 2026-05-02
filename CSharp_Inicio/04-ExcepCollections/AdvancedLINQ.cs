@@ -69,18 +69,33 @@
                                          join a in abilities on c.Id equals a.CharacterId
                                          select new { c.Alias, c.Name, a.Description };
 
-            WriteLine("Personajes y sus habilidades:");
-            foreach(var character in characterWithAbilities)
+            //WriteLine("Personajes y sus habilidades:");
+            //foreach(var character in characterWithAbilities)
+            //{
+            //    WriteLine($"{character.Alias} {character.Name} {character.Description}");
+            //}
+
+
+            int totalPower = statistics.Sum(s => s.Power);
+            WriteLine($"⚡ Poder total de todos los personajes: {totalPower}");
+
+            var avengersPower = (from c in characters
+                                 join s in statistics on c.Id equals s.CharacterId
+                                 where c.Team == "Avengers"
+                                 select s.Power).Average();
+
+
+            WriteLine($"🛡️ Promedio de poder de los Avengers: {avengersPower:F2}");
+
+            var abilitiesByCharacter = from c in characters
+                                       join a in abilities on c.Id equals a.CharacterId
+                                       group a by c.Alias into groupAbilities
+                                       select new { Character = groupAbilities.Key, Count = groupAbilities.Count() };
+            WriteLine("📝 Cantidad de habilidades por personaje:");
+            foreach( var character in abilitiesByCharacter)
             {
-                WriteLine($"{character.Alias} {character.Name} {character.Description}");
+                WriteLine($"{character.Character}: {character.Count}");
             }
-
-
-
-
-            // WriteLine($"⚡ Poder total de todos los personajes: {totalPower}");
-            // WriteLine($"🛡️ Promedio de poder de los Avengers: {avengersPower:F2}");
-            // WriteLine("📝 Cantidad de habilidades por personaje:");
         }
     }
 }

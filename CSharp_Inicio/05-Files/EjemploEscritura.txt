@@ -1,0 +1,10 @@
+Primera Linea
+La hora Actual es:
+HH:mm:ss
+Primera Linea
+La hora Actual es:
+HH:mm:ss
+Primera Linea
+La hora Actual es: 23:08:02
+Primera Linea
+La hora Actual es: 23:19:10

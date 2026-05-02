@@ -10,6 +10,13 @@ partial class Program
         //HandleException();
 
         //Linq();
-        AdvancedLinq.Program.AdvancedLINQ();
+        //AdvancedLinq.Program.AdvancedLINQ();
+        //SalesAnalysis();
+
+        //FileExample();
+        //DirectoryExample();
+        //PathExample();
+        //WriteFileExample();
+        ManageJsonFile.Program.ManageJsonFile();
     }
 }
