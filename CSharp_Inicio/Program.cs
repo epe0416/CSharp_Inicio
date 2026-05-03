@@ -18,6 +18,6 @@ partial class Program
         //PathExample();
         //WriteFileExample();
         //ManageJsonFile.Program.ManageJsonFile();
-        TaskMaster();
+        TaskMaster.Program.TaskMaster();
     }
 }
