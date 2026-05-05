@@ -8,14 +8,8 @@ namespace TaskMaster
 
         public void ListTasks()
         {
-            ForegroundColor = ConsoleColor.DarkBlue;
+            ForegroundColor = ConsoleColor.DarkCyan;
             WriteLine("-----Lista de tareas-----");
-            //WriteLine("\n{0,-8} {1, 35} {2,-15}","Id","Descripcion","Completado");
-            //foreach(var task in Tasks)
-            //{
-            //    WriteLine(new string('-', 58));
-            //    WriteLine("\n{0,-8} {1, 35} {2,-15}", task.Id, task.Description, task.Completed);
-            //}
             Table table = new Table("Id", "Descripcion", "Estado");
             foreach(var task in Tasks)
             {
@@ -25,6 +19,29 @@ namespace TaskMaster
             table.Config = TableConfiguration.Unicode();
             Write(table.ToString());
             ReadKey();
+        }
+        public List<Task> AddTask()
+        {
+            try
+            {
+                ResetColor();
+                Clear();
+                WriteLine("---Añadir Tarea---");
+                WriteLine("Ingrese la descripción de la tarea: ");
+                var description = ReadLine()!;
+                Task newTask = new Task(Utils.GenerateId(), description);
+                Tasks.Add(newTask);
+                ForegroundColor = ConsoleColor.Green;
+                WriteLine("Tarea añadida con éxito");
+                ResetColor();
+                return Tasks;
+            }
+            catch(Exception ex)
+            {
+                ForegroundColor = ConsoleColor.Red;
+                WriteLine(ex.ToString());
+                return Tasks;
+            }
         }
 
     }

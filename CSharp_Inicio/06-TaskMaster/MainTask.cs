@@ -5,8 +5,8 @@ namespace TaskMaster
     {
         static FileActions<Task> fileActions = new("F:\\Dev\\Cursos\\DevTalles\\CSharp\\CSharp_Inicio\\CSharp_Inicio\\06-TaskMaster\\tasks.json");
         static List<Task> tasks = fileActions.ReadFile();
-        static Queries queries = new (tasks);
-    public static void TaskMaster()
+        static Queries queries = new(tasks);
+        public static void TaskMaster()
         {
             bool salir = false;
             while (!salir)
@@ -29,7 +29,7 @@ namespace TaskMaster
                         queries.ListTasks();
                         break;
                     case "2":
-                        // AddTask();
+                        AddTask();
                         break;
                     case "3":
                         // MarkAsCompleted();
@@ -55,6 +55,18 @@ namespace TaskMaster
                         Console.WriteLine("Opción no válida. Intente nuevamente.");
                         break;
                 }
+            }
+        }
+        public static void AddTask()
+        {
+            try
+            {
+                var tasks = queries.AddTask();
+                fileActions.WriteFile(tasks);
+            }
+            catch(Exception ex)
+            {
+                WriteLine($"Ocurrio un error al añadir la tarea: {ex.Message}");
             }
         }
 

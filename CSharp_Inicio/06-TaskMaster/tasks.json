@@ -4,7 +4,7 @@
     "Description": "Limpiar el cuarto",
     "Completed": true,
     "CreatedAt": "2024-04-15T00:00:00",
-    "ModifiedAt": "2025-03-10T19:17:56.371587-04:00",
+    "ModifiedAt": "2025-03-10T17:17:56.371587-06:00",
     "Deleted": true
   },
   {
@@ -19,8 +19,16 @@
     "Id": "3f6c921",
     "Description": "Estudiar C#",
     "Completed": false,
-    "CreatedAt": "2025-03-11T15:20:53.051415-04:00",
-    "ModifiedAt": "2025-03-12T13:16:17.74727-04:00",
+    "CreatedAt": "2025-03-11T13:20:53.051415-06:00",
+    "ModifiedAt": "2025-03-12T11:16:17.74727-06:00",
+    "Deleted": false
+  },
+  {
+    "Id": "49b5564",
+    "Description": "Culminar curso",
+    "Completed": false,
+    "CreatedAt": "2026-05-04T22:48:05.8806302-06:00",
+    "ModifiedAt": "2026-05-04T22:48:05.8806363-06:00",
     "Deleted": false
   }
 ]
