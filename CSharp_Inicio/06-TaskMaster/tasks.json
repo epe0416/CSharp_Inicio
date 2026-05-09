@@ -9,10 +9,10 @@
   },
   {
     "Id": "f73d8fd",
-    "Description": "Comer saludable",
-    "Completed": false,
+    "Description": "Test Modificado",
+    "Completed": true,
     "CreatedAt": "2024-01-15T00:00:00",
-    "ModifiedAt": "2024-01-15T00:00:00",
+    "ModifiedAt": "2026-05-06T21:45:28.0246206-06:00",
     "Deleted": true
   },
   {
@@ -21,14 +21,6 @@
     "Completed": false,
     "CreatedAt": "2025-03-11T13:20:53.051415-06:00",
     "ModifiedAt": "2025-03-12T11:16:17.74727-06:00",
-    "Deleted": false
-  },
-  {
-    "Id": "49b5564",
-    "Description": "Culminar curso",
-    "Completed": false,
-    "CreatedAt": "2026-05-04T22:48:05.8806302-06:00",
-    "ModifiedAt": "2026-05-04T22:48:05.8806363-06:00",
     "Deleted": false
   }
 ]
