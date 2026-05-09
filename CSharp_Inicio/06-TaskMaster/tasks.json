@@ -22,5 +22,13 @@
     "CreatedAt": "2025-03-11T13:20:53.051415-06:00",
     "ModifiedAt": "2025-03-12T11:16:17.74727-06:00",
     "Deleted": false
+  },
+  {
+    "Id": "2f66f92",
+    "Description": "Limpiar Patio",
+    "Completed": false,
+    "CreatedAt": "2026-05-08T23:05:28.1489918-06:00",
+    "ModifiedAt": "2026-05-08T23:05:28.148994-06:00",
+    "Deleted": false
   }
 ]
